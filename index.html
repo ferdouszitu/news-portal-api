@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily News</title>
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/854ca64380.js" crossorigin="anonymous"></script>
+    <!-- tailwind css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css  -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="w-11/12 mx-auto mb-20">
+    <header>
+        <!-------Nav Bar ------>
+        <nav class="">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="font-semibold">
+                                <a href="index.html">News</a>
+                            </li>
+                            <li class="font-semibold">
+                                <a href="blog.html">Blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case text-2xl font-bold">The Daily <span
+                            class="ml-2 bg-rose-400 p-2 text-white rounded-lg">News</span> </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal p-0">
+
+                        <li class="font-semibold">
+                            <a href="index.html">News</a>
+                        </li>
+                        <li class="font-semibold">
+                            <a href="blog.html">Blogs</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">About us</a>
+                </div>
+            </div>
+        </nav>
+        <hr class="">
+
+    </header>
+    <main>
+
+        <!-- all categories display  -->
+        <section>
+            <div id="all-news-category" class="grid grid-cols-2 lg:grid-cols-8 px-8 py-5 bg-orange-100 rounded-lg">
+            </div>
+            <div id="data-length">
+
+            </div>
+        </section>
+
+        <section>
+            <!-- spinner or loader  -->
+            <div>
+                <h4 id="toggle_spinner" class="text-2xl text-center my-3 py-3 hidden">
+                    <div class="flex justify-center items-center">
+                        <p class="mr-2">Loading</p>
+                        <div class="spinner-border animate-spin inline-block w-10 h-10 border-4 rounded-full"
+                            role="status">
+
+                        </div>
+                    </div>
+
+
+                </h4>
+            </div>
+            <!-- error  -->
+            <div id="error_messsage" class="text-2xl text-center">
+
+            </div>
+        </section>
+
+        <!-- news-details  -->
+        <section>
+
+            <div>
+                <div class="text-center text-2xl font-medium my-4 py-2 bg-red-50" id="length">
+
+                </div>
+                <div id="news-details">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- modal  -->
+        <section>
+
+            <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+            <div class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="modal">
+
+                    </div>
+                    <div class="modal-action">
+                        <label for="my-modal-6" class="btn">Close!</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

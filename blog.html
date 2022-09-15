@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!-- tailwind css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-11/12 mx-auto mb-20">
+    <header>
+        <nav class="">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="font-semibold">
+                                <a href="index.html">News</a>
+                            </li>
+                            <li class="font-semibold">
+                                <a href="blog.html">Blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost normal-case text-2xl font-bold">The Daily <span
+                            class="ml-2 bg-rose-400 p-2 text-white rounded-lg">News</span> </a>
+                </div>
+                <div class="navbar-center hidden bg-cyan-200 rounded lg:flex">
+                    <ul class="menu menu-horizontal p-0">
+                        <li class="font-semibold">
+                            <a href="index.html">News</a>
+                        </li>
+                        <li class="font-semibold">
+                            <a href="blog.html">Blogs</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">About us</a>
+                </div>
+            </div>
+        </nav>
+        <hr class="">
+
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h1 class="text-xl font-bold">1.What is the difference between var,let,const?</h1>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">Var:</span> Var:The scope of a var variable is functional
+                    scope.var is function scoped when it is declared within
+                    a function. This means that it is available and can be accessed only
+                    within that function.It can be declared without initialization.It can be
+                    accessed without initialization as its default value is “undefined”.
+                </p>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">Let:</span> The scope of a let variable is block
+                    scope.Variables declared with the let
+                    keyword are not subject to hoisting. This means you cannot use a variable unless
+                    it is declared and initialized.It can be declared without initialization.
+                    It cannot be accessed without initialization otherwise it will give ‘referenceError’.
+                </p>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">Const:</span>The scope of a const variable is block
+                    scope.The only difference with
+                    const is that const is used to define only constant values in JavaScript programs.
+                    It cannot be declared without initialization.It cannot be accessed without
+                    initialization, as it cannot be declared without initialization.
+                </p>
+
+            </div> <br>
+            <div>
+                <h1 class="text-xl font-bold">2.What is the difference between arrow function and regular function?</h1>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">Arrow Function:</span> An arrow function is also known as
+                    the fat arrow function. It is a new feature
+                    introduced in ES6 that is a more concise syntax for writing function expressions.
+                    // Arrow function ES6
+                    let add = (a, b) => { return a + b};
+                    //or
+                    let add = (a, b) => a + b;
+
+
+                    <span class="font-medium text-blue-500">Regular Function:</span> Regular functions created using
+                    function declarations or expressions are
+                    ‘constructible’ and ‘callable’. Since regular functions are constructible, they can be called using
+                    the ‘new’ keyword. However, the arrow functions are only ‘callable’ and not constructible. Thus, we
+                    will get a run-time error on trying to construct a non-constructible arrow functions using the new
+                    keyword.
+
+                    Example using regular function:-
+                    let x = function(){
+                    console.log(arguments);
+                    };
+                    new x =(1,2,3);
+                </p>
+
+            </div> <br>
+            <div>
+                <h1 class="text-xl font-bold">3.what is the difference between map,forEach,filter,find?</h1>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">map:</span>The map() method creates an entirely new
+                    array.The map() method returns the newly created array
+                    according to the provided callback function.
+                    It calls a function once for each element in an array.
+                </p>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">forEach:</span> Foreach takes a callback function and run
+                    that callback function on each
+                    element of array one by one. The forEach() method does not create a new array based on the given
+                    array.
+                </p>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">filter:</span>.filter() checks every element in an array to
+                    see if it meets a certain criteria and returns
+                    a new array with the elements that return truthy for the criteria.
+                    This function returns an array of found results, if any, even if only 1 match is found. If a
+                    function does not find any match, it simply returns an empty array.
+                </p>
+                <p class="border border-red-500 p-3 rounded-lg m-3">
+                    <span class="font-medium text-blue-500">find:</span> .find() When you want to select a single
+                    element from an array.If in an array is more than one
+                    result, the function will return the first that has matched.
+                </p>
+            </div><br>
+
+
+        </section>
+    </main>
+</body>
+
+</html>
